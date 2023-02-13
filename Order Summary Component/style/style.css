@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #d6e1ff;
+}
+
+main {
+  background-color: white;
+  width: 350px;
+  height: 550px;
+  margin: 30px auto;
+  border-radius: 15px;
+  box-shadow: 0 0 15px lightblue;
+  text-align: center;
+}
+
+#dancing {
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+}
+
+#texto {
+  width: 80%;
+  margin: auto;
+  color: rgb(66, 66, 66);
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 30px;
+}
+
+#description {
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+#plan {
+  margin-top: 20px;
+  padding: 5px 0;
+  display: flex;
+  background-color: rgb(241, 241, 241);
+  border-radius: 10px;
+}
+
+#background {
+  background-color: lightgray;
+  width: 40px;
+  height: 40px;
+  margin: 10px 10px 10px 15px;
+  border-radius: 50%;
+}
+
+#background img {
+  margin-top: 10px;
+}
+
+#plan-specs {
+  margin: auto auto auto 5px;
+  text-align: left;
+}
+
+h3 {
+  font-size: 14px;
+  font-weight: 800;
+  padding-bottom: 5px;
+}
+
+a {
+  margin: auto 20px auto auto;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+#payment,
+#cancel {
+  display: block;
+  margin: 20px auto;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+#payment {
+  background-color: #382ae1;
+  color: white;
+  box-shadow: 0 10px 10px lightgray;
+}
+
+#cancel {
+  background-color: white;
+  font-size: 12px;
+}
+
+/*# sourceMappingURL=style.css.map */
