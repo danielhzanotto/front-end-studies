@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&family=Poppins:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+  color: gray;
+}
+
+body {
+  background-color: rgb(253, 247, 233);
+}
+
+#title {
+  position: absolute;
+  color: black;
+  font-size: 30px;
+  margin: -10px 25px;
+}
+
+.show-bar {
+  background-color: rgb(253, 247, 233);
+  display: block;
+  position: absolute;
+
+  right: 0;
+  height: 100%;
+  padding: 0 40px 0 25px;
+}
+
+.show-menu {
+  display: block;
+  margin: 25px 25px 0 auto;
+}
+
+nav {
+  display: none;
+
+  h4 {
+    font-size: 16px;
+    margin: 25px 14px 15px 0;
+    font-weight: 200;
+  }
+
+  #login {
+    margin: 25px 15px 25px auto;
+    font-weight: bold;
+  }
+
+  #register {
+    margin: 15px 25px 15px 5px;
+    padding: 7px 20px;
+    border: 2px solid gray;
+    border-radius: 20px;
+    font-weight: bold;
+  }
+
+  #features-drop,
+  #company-drop {
+    padding: 0 20px;
+    line-height: 30px;
+  }
+}
+
+main {
+  margin: auto;
+  #descriptions {
+    margin: 30px 25px;
+    text-align: center;
+    h1 {
+      font-size: 40px;
+      color: black;
+    }
+    p {
+      line-height: 25px;
+      font-size: 16px;
+      padding: 20px 0;
+    }
+    h4 {
+      width: 100px;
+      font-size: 16px;
+      margin: 20px auto;
+      padding: 7px 15px;
+      border: 2px solid gray;
+      border-radius: 20px;
+    }
+  }
+}
+#intro-art-mobile {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  img {
+    width: 100%;
+  }
+}
+#intro-art-desktop {
+  display: none;
+}
+@media only screen and (min-width: 450px) {
+  #intro-art-mobile img {
+    width: 450px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #title {
+    margin: 15px 25px;
+  }
+  #menu-bar {
+    display: none;
+  }
+  nav {
+    display: flex;
+    margin: 0 0 0 120px;
+
+    h4 {
+      margin: 25px 14px;
+    }
+
+    #register:hover {
+      border: 2px solid black;
+    }
+
+    h4:hover,
+    p:hover {
+      cursor: pointer;
+      color: black;
+    }
+
+    #features-drop,
+    #company-drop {
+      padding: 20px;
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgb(255, 224, 224);
+    }
+  }
+  main {
+    display: flex;
+
+    #descriptions {
+      text-align: left;
+      margin: 50px 7% 0 7%;
+      width: 50%;
+      h1 {
+        font-size: 50px;
+      }
+      p {
+        padding: 25px 30px 0 0;
+      }
+      h4 {
+        text-align: center;
+        margin: 25px auto 15px 0;
+      }
+      h4:hover {
+        color: black;
+        border: 2px solid black;
+      }
+    }
+  }
+  #intro-art-desktop {
+    display: block;
+    margin: 50px 7% auto auto;
+    width: 40%;
+  }
+  #intro-art-mobile {
+    display: none;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+  position: absolute;
+}
