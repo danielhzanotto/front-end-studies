@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>My Website</title>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <header>
+      <img
+        id="menu-icon"
+        src="images/menu.png"
+        alt="menu icon"
+        width="25"
+        height="25"
+      />
+      <h2>sneakers</h2>
+
+      <nav>
+        <div id="navbar">
+          <img
+            src="images/close.png"
+            alt="close icon"
+            width="20"
+            id="close-nav"
+          />
+          <a href="#">Collections</a>
+          <a href="#">Men</a>
+          <a href="#">Women</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </div>
+        <div id="gray-filter"></div>
+      </nav>
+      <div id="user-items">
+        <img src="images/cart.png" alt="cart icon" id="cart" width="30" /><img
+          src="images/author.jpg"
+          alt="profile picture"
+          id="profile"
+          width="40"
+        />
+      </div>
+    </header>
+    <main>
+      <section id="images-product">
+        <div id="images-carrossel">
+          <div id="flechas">
+            <div>
+              <img
+                src="images/flecha-esquerda.png"
+                alt="flecha esquerda"
+                width="20"
+              />
+            </div>
+            <div>
+              <img
+                src="images/flecha-direita.png"
+                alt="flecha direita"
+                width="20"
+              />
+            </div>
+          </div>
+          <img
+            class="carousel"
+            src="images/image-product-1.jpg"
+            alt="imagem produto 1"
+            id="img-1"
+          />
+          <img
+            class="hide carousel"
+            src="images/image-product-2.jpg"
+            alt="imagem produto 2"
+            id="img-2"
+          />
+          <img
+            class="hide carousel"
+            src="images/image-product-3.jpg"
+            alt="imagem produto 3"
+            id="img-3"
+          />
+          <img
+            class="hide carousel"
+            src="images/image-product-4.jpg"
+            alt="imagem produto 4"
+            id="img-4"
+          />
+        </div>
+        <div id="images-thumbnail">
+          <img
+            src="images/image-product-1-thumbnail.jpg"
+            alt="imagem produto 1 thumbnail"
+            id="img-1-thumb"
+            class="thumb-selected"
+          />
+          <img
+            src="images/image-product-2-thumbnail.jpg"
+            alt="imagem produto 2 thumbnail"
+            id="img-2-thumb"
+          />
+          <img
+            src="images/image-product-3-thumbnail.jpg"
+            alt="imagem produto 3 thumbnail"
+            id="img-3-thumb"
+          />
+          <img
+            src="images/image-product-4-thumbnail.jpg"
+            alt="imagem produto 4 thumbnail"
+            id="img-4-thumb"
+          />
+        </div>
+      </section>
+      <section id="product-description">
+        <h6>SNEAKER COMPANY</h6>
+        <h1 id="title">Fall Limited Edition Sneakers</h1>
+        <p>
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they'll withstand everything
+          the weather can offer.
+        </p>
+        <div id="price-section">
+          <h1>$125.00</h1>
+          <h3 id="discount">50%</h3>
+          <h3 id="original-price">$250.00</h3>
+        </div>
+        <div id="buttons-buy">
+          <div id="add-item">
+            <button class="change-quantity" id="take-off">-</button>
+            <p>0</p>
+            <button class="change-quantity" id="add">+</button>
+          </div>
+          <button id="add-to-cart">
+            <img src="images/cart.png" alt="cart icon" width="23" />
+            Add to cart
+          </button>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
