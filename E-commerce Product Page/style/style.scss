@@ -108,13 +108,13 @@ header {
     box-shadow: 0 0 10px lightgray;
   }
   .thumb-selected {
-    border: 3px solid black;
-    filter: opacity(50%);
+    border: 3px solid $orange;
+    filter: opacity(70%);
   }
 }
 
 #product-description {
-  margin: 60px 25px;
+  margin: 50px;
   h6 {
     font-size: 0.8rem;
     color: $orange;
@@ -200,6 +200,9 @@ header {
   #price-section {
     width: 300px;
   }
+  #product-description {
+    margin: 50px 75px;
+  }
 }
 
 @media only screen and (min-width: 812px) {
@@ -264,17 +267,19 @@ header {
     }
   }
 }
+
 @media only screen and (min-width: 1024px) {
   main {
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: auto auto;
 
     #images-product {
-      margin: 0 auto 0 30px;
+      margin: 0 50px;
     }
+
     #product-description {
-      margin: 25px 30px 25px 16%;
-      width: 80%;
+      margin: 25px 50px 0 0;
+      // width: 80%;
     }
   }
 }
