@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Multi-Step Form</title>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <nav>
+      <div id="page-1">
+        <button class="selected">1</button>
+        <div class="page-description">
+          <p>STEP 1</p>
+          <h4>YOUR INFO</h4>
+        </div>
+      </div>
+      <div id="page-2">
+        <button>2</button>
+        <div class="page-description">
+          <p>STEP 2</p>
+          <h4>SELECT PLAN</h4>
+        </div>
+      </div>
+      <div id="page-3">
+        <button>3</button>
+        <div class="page-description">
+          <p>STEP 3</p>
+          <h4>ADD-ONS</h4>
+        </div>
+      </div>
+      <div id="page-4">
+        <button>4</button>
+        <div class="page-description">
+          <p>STEP 4</p>
+          <h4>SUMMARY</h4>
+        </div>
+      </div>
+    </nav>
+
+    <section id="personal-info" class="">
+      <div class="header">
+        <h1>Personal Info</h1>
+        <p>Please provide your name, email address and phone number.</p>
+      </div>
+      <div class="form" id="info">
+        <form action="" method="post" id="post-name">
+          <label for="POST-name">Name</label>
+          <input
+            id="POST-name"
+            type="text"
+            name="name"
+            placeholder="e.g. Stephen King"
+            required
+          />
+        </form>
+        <form action="" method="post" id="post-email">
+          <label for="POST-email">Email Address</label>
+          <input
+            id="POST-email"
+            type="email"
+            name="email"
+            placeholder="e.g. username@email.com"
+            required
+          />
+        </form>
+        <form action="" method="post" id="post-phone">
+          <label for="POST-phone">Phone Number</label>
+          <input
+            id="POST-phone"
+            type="tel"
+            name="phone"
+            placeholder="e.g. +55 11 9 9999 1234"
+            required
+          />
+        </form>
+      </div>
+      <div class="footer">
+        <button class="go-back disabled">Go Back</button>
+        <button class="next-step">Next Step</button>
+      </div>
+    </section>
+
+    <section id="select-plan" class="hide">
+      <div class="header">
+        <h1>Select Your Plan</h1>
+        <p>You have the option of monthly or yearly billing.</p>
+      </div>
+      <div class="form" id="sel-plan">
+        <form action="" method="post" id="plan">
+          <input type="radio" id="arcade" name="plan" value="Arcade" />
+          <label for="arcade" class="label-pattern"
+            ><img src="images/icon-arcade.svg" alt="" />
+            <div>
+              <h4>Arcade</h4>
+              <p>R$9<span class="plan-change">/mo</span></p>
+              <h6 class="year-contract">2 months free</h6>
+            </div></label
+          >
+          <input type="radio" id="advanced" name="plan" value="Advanced" />
+          <label for="advanced" class="label-pattern"
+            ><img src="images/icon-advanced.svg" alt="" />
+            <div>
+              <h4>Advanced</h4>
+              <p>R$12<span class="plan-change">/mo</span></p>
+              <h6 class="year-contract">2 months free</h6>
+            </div></label
+          >
+          <input type="radio" id="pro" name="plan" value="Pro" checked />
+          <label for="pro" class="label-pattern"
+            ><img src="images/icon-pro.svg" alt="" />
+            <div>
+              <h4>Pro</h4>
+              <p>R$15<span class="plan-change">/mo</span></p>
+              <h6 class="year-contract">2 months free</h6>
+            </div></label
+          >
+        </form>
+        <form action="" method="post" id="payment-method">
+          <input
+            type="radio"
+            id="month"
+            class="form-control"
+            name="payment-method"
+            value="Month"
+          />
+          <label for="month">Monthly</label>
+          <input
+            type="radio"
+            id="year"
+            name="payment-method"
+            value="Year"
+            class="form-control"
+            checked
+          />
+          <label for="year">Yearly</label>
+        </form>
+      </div>
+      <div class="footer">
+        <button class="go-back">Go Back</button>
+        <button class="next-step">Next Step</button>
+      </div>
+    </section>
+
+    <section id="add-ons" class="hide">
+      <div class="header">
+        <h1>Pick Add-ons</h1>
+        <p>Add-ons help enhance your gaming experience.</p>
+      </div>
+      <div class="form add-ons-content">
+        <form action="" method="post">
+          <input
+            type="checkbox"
+            id="online-service"
+            name="online-service"
+            value="Online"
+          />
+          <label for="online-service" class="label-pattern"
+            ><div>
+              <h4>Online Service</h4>
+              <p>Access to multiplayer games</p>
+            </div>
+            <h6>+R$1<span class="plan-change">/mo</span></h6></label
+          >
+
+          <input
+            type="checkbox"
+            id="larger-storage"
+            name="larger-storage"
+            value="Storage"
+          />
+          <label for="larger-storage" class="label-pattern"
+            ><div>
+              <h4>Larger Storage</h4>
+              <p>Extra 1TB of cloud save</p>
+            </div>
+            <h6>+R$2<span class="plan-change">/mo</span></h6></label
+          >
+
+          <input
+            type="checkbox"
+            id="custom-profile"
+            name="custom-profile"
+            value="Custom"
+          />
+          <label for="custom-profile" class="label-pattern"
+            ><div>
+              <h4>Custom Profile</h4>
+              <p>Custom theme on your profile</p>
+            </div>
+            <h6>+R$2<span class="plan-change">/mo</span></h6></label
+          >
+        </form>
+      </div>
+      <div class="footer">
+        <button class="go-back">Go Back</button>
+        <button class="next-step">Next Step</button>
+      </div>
+    </section>
+
+    <section id="summary" class="hide">
+      <div class="header">
+        <h1>Finishing Up</h1>
+        <p>Duble-check if everything looks OK before confirming</p>
+      </div>
+      <div class="form">
+        <div>here get info from plan</div>
+        <div>here get info from add-ons</div>
+        <div>total</div>
+      </div>
+      <div class="footer">
+        <button class="go-back">Go Back</button>
+        <input class="next-step" type="submit" value="Submit" />
+      </div>
+    </section>
+
+    <section id="thanks" class="hide">
+      <div class="header thanks">
+        <img src="images/icon-thank-you.svg" alt="thanks icon" />
+        <h1>Thank You!</h1>
+        <p>
+          Thanks for confirming your subscription! We hoje you have fun using
+          our platform. If you ever need support, please feel free to email us
+          at support@loremgaming.com.
+        </p>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
