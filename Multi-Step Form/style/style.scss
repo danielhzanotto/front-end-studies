@@ -25,11 +25,17 @@ $white: hsl(0, 0%, 100%);
 .hide {
   display: none;
 }
+.show {
+  display: block;
+}
 
 body {
   background-color: $magnolia;
 }
-nav {
+#desktop {
+  display: none;
+}
+#nav {
   background-image: url("../images/bg-sidebar-mobile.svg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -91,52 +97,6 @@ section {
     font-size: 0.8rem;
   }
 
-  .footer {
-    position: fixed;
-    bottom: 0;
-    background-color: $white;
-    width: 100%;
-    margin: 0 -12.5%;
-    padding: 30px 0;
-    display: flex;
-    justify-content: space-between;
-    button {
-      font-weight: bold;
-      font-size: 1rem;
-      padding: 10px;
-      border-radius: 10px;
-    }
-    .go-back {
-      margin-left: 25px;
-      border: 2px solid $pastel-blue;
-      background-color: $white;
-      color: $pastel-blue;
-    }
-    .go-back:hover {
-      color: $marine-blue;
-      border: 2px solid $marine-blue;
-    }
-    .disabled {
-      pointer-events: none;
-    }
-    .next-step {
-      margin-right: 25px;
-      border: 2px solid $purplish-blue;
-      background-color: $purplish-blue;
-      color: white;
-    }
-    input.next-step {
-      padding: 10px;
-      border-radius: 10px;
-      font-weight: bold;
-      font-size: 1rem;
-    }
-    .next-step:hover {
-      color: $purplish-blue;
-      background-color: white;
-    }
-  }
-
   .label-pattern {
     border: 1px solid $cool-gray;
     border-radius: 10px;
@@ -161,46 +121,47 @@ section {
       }
     }
   }
-
+  .label-pattern:hover {
+    border: 1px solid $marine-blue;
+  }
   #info {
-    form {
-      display: grid;
-
-      label {
-        color: $marine-blue;
-        font-weight: bold;
-        padding: 15px 0 5px 0;
-      }
-      input {
-        padding: 10px;
-        min-width: 140px;
-        border-radius: 5px;
-        border: 1px solid $cool-gray;
-      }
+    display: grid;
+    label {
+      color: $marine-blue;
+      font-weight: bold;
+      padding: 15px 0 5px 0;
+    }
+    input {
+      padding: 10px;
+      min-width: 140px;
+      border-radius: 5px;
+      border: 1px solid $cool-gray;
+    }
+    input:hover {
+      border: 1px solid $marine-blue;
+    }
+    input:invalid {
+      border-color: $strawberry-red;
+      background-color: $magnolia;
     }
   }
 
   #sel-plan {
-    #plan {
-      input[type="radio"]:checked + label {
-        background-color: $magnolia;
-        border: 1px solid $marine-blue;
-      }
-      input {
-        display: none;
-      }
-      label {
-        .year-contract {
-          display: none;
-        }
-      }
+    input[type="radio"]:checked + label {
+      background-color: $magnolia;
+      border: 1px solid $marine-blue;
     }
+    input[type="radio"] {
+      display: none;
+    }
+
     #payment-method {
       display: flex;
       justify-content: center;
-      background-color: $alabaster;
+      background-color: $magnolia;
+      border-radius: 10px;
       margin-top: 25px;
-      padding: 15px 0;
+      padding: 20px 0;
       label {
         font-size: 1.2rem;
         color: $cool-gray;
@@ -220,13 +181,12 @@ section {
       }
       input[type="radio"]:checked + label {
         color: $marine-blue;
+        border: 0;
       }
       input[type="radio"] {
         margin-top: 2px;
-        -webkit-appearance: none;
         appearance: none;
         background-color: $marine-blue;
-
         width: 25px;
         aspect-ratio: 1/1;
         display: grid;
@@ -268,8 +228,113 @@ section {
       }
     }
   }
-  .thanks {
-    text-align: center;
-    padding: 50px 25px;
+}
+
+.thanks {
+  text-align: center;
+  padding: 50px 25px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  background-color: $white;
+  width: 100%;
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  .button {
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  #go-back {
+    margin-left: 25px;
+    border: 2px solid $pastel-blue;
+    background-color: $white;
+    color: $pastel-blue;
+  }
+  #go-back:hover {
+    color: $marine-blue;
+    border: 2px solid $marine-blue;
+  }
+  .disabled {
+    pointer-events: none;
+  }
+  .next-step {
+    margin-right: 25px;
+    border: 2px solid $purplish-blue;
+    background-color: $purplish-blue;
+    color: white;
+  }
+  input.next-step {
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  .next-step:hover {
+    color: $purplish-blue;
+    background-color: white;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  main {
+    background-color: $white;
+    display: grid;
+    grid-template-columns: 30% auto;
+    margin: 10% auto;
+    width: 80%;
+    max-width: 900px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px $light-gray;
+  }
+  nav {
+    display: block;
+    margin: 20px;
+    #desktop {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1/2;
+    }
+    #nav {
+      display: block;
+
+      background-image: url("../images/bg-sidebar-desktop.svg");
+
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-color: $purplish-blue;
+      width: 100%;
+      aspect-ratio: 4/1;
+
+      // height: 100%;
+
+      .description {
+        display: flex;
+        button {
+          margin: 0;
+        }
+      }
+      .page-description {
+        display: block;
+      }
+    }
+  }
+
+  form {
+    margin: auto;
+    padding: 25px 0;
+    width: 85%;
+  }
+  section {
+    margin: 0;
+    width: 100%;
+  }
+  .footer {
+    position: relative;
+    margin: 0;
   }
 }

@@ -13,11 +13,19 @@
   display: none;
 }
 
+.show {
+  display: block;
+}
+
 body {
   background-color: hsl(217deg, 100%, 97%);
 }
 
-nav {
+#desktop {
+  display: none;
+}
+
+#nav {
   background-image: url("../images/bg-sidebar-mobile.svg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -28,7 +36,7 @@ nav {
   display: flex;
   justify-content: center;
 }
-nav button {
+#nav button {
   border: 2px solid hsl(0deg, 0%, 100%);
   background-color: transparent;
   color: hsl(0deg, 0%, 100%);
@@ -39,15 +47,15 @@ nav button {
   aspect-ratio: 1/1;
   border-radius: 50%;
 }
-nav button:hover {
+#nav button:hover {
   border: 2px solid hsl(206deg, 94%, 87%);
 }
-nav .selected {
+#nav .selected {
   border: 2px solid hsl(206deg, 94%, 87%);
   background-color: hsl(206deg, 94%, 87%);
   color: hsl(213deg, 96%, 18%);
 }
-nav .page-description {
+#nav .page-description {
   display: none;
 }
 
@@ -76,51 +84,6 @@ section .form {
   padding: 0 25px 25px 25px;
   font-size: 0.8rem;
 }
-section .footer {
-  position: fixed;
-  bottom: 0;
-  background-color: hsl(0deg, 0%, 100%);
-  width: 100%;
-  margin: 0 -12.5%;
-  padding: 30px 0;
-  display: flex;
-  justify-content: space-between;
-}
-section .footer button {
-  font-weight: bold;
-  font-size: 1rem;
-  padding: 10px;
-  border-radius: 10px;
-}
-section .footer .go-back {
-  margin-left: 25px;
-  border: 2px solid hsl(228deg, 100%, 84%);
-  background-color: hsl(0deg, 0%, 100%);
-  color: hsl(228deg, 100%, 84%);
-}
-section .footer .go-back:hover {
-  color: hsl(213deg, 96%, 18%);
-  border: 2px solid hsl(213deg, 96%, 18%);
-}
-section .footer .disabled {
-  pointer-events: none;
-}
-section .footer .next-step {
-  margin-right: 25px;
-  border: 2px solid hsl(243deg, 100%, 62%);
-  background-color: hsl(243deg, 100%, 62%);
-  color: white;
-}
-section .footer input.next-step {
-  padding: 10px;
-  border-radius: 10px;
-  font-weight: bold;
-  font-size: 1rem;
-}
-section .footer .next-step:hover {
-  color: hsl(243deg, 100%, 62%);
-  background-color: white;
-}
 section .label-pattern {
   border: 1px solid hsl(231deg, 11%, 63%);
   border-radius: 10px;
@@ -145,36 +108,44 @@ section .label-pattern div h6 {
   color: hsl(213deg, 96%, 18%);
   font-size: 0.8rem;
 }
-section #info form {
+section .label-pattern:hover {
+  border: 1px solid hsl(213deg, 96%, 18%);
+}
+section #info {
   display: grid;
 }
-section #info form label {
+section #info label {
   color: hsl(213deg, 96%, 18%);
   font-weight: bold;
   padding: 15px 0 5px 0;
 }
-section #info form input {
+section #info input {
   padding: 10px;
   min-width: 140px;
   border-radius: 5px;
   border: 1px solid hsl(231deg, 11%, 63%);
 }
-section #sel-plan #plan input[type=radio]:checked + label {
+section #info input:hover {
+  border: 1px solid hsl(213deg, 96%, 18%);
+}
+section #info input:invalid {
+  border-color: hsl(354deg, 84%, 57%);
+  background-color: hsl(217deg, 100%, 97%);
+}
+section #sel-plan input[type=radio]:checked + label {
   background-color: hsl(217deg, 100%, 97%);
   border: 1px solid hsl(213deg, 96%, 18%);
 }
-section #sel-plan #plan input {
-  display: none;
-}
-section #sel-plan #plan label .year-contract {
+section #sel-plan input[type=radio] {
   display: none;
 }
 section #sel-plan #payment-method {
   display: flex;
   justify-content: center;
-  background-color: hsl(231deg, 100%, 99%);
+  background-color: hsl(217deg, 100%, 97%);
+  border-radius: 10px;
   margin-top: 25px;
-  padding: 15px 0;
+  padding: 20px 0;
 }
 section #sel-plan #payment-method label {
   font-size: 1.2rem;
@@ -195,10 +166,10 @@ section #sel-plan #payment-method label:last-child {
 }
 section #sel-plan #payment-method input[type=radio]:checked + label {
   color: hsl(213deg, 96%, 18%);
+  border: 0;
 }
 section #sel-plan #payment-method input[type=radio] {
   margin-top: 2px;
-  -webkit-appearance: none;
   appearance: none;
   background-color: hsl(213deg, 96%, 18%);
   width: 25px;
@@ -236,9 +207,108 @@ section .add-ons-content .label-pattern h6 {
   padding-left: 15px;
   color: hsl(243deg, 100%, 62%);
 }
-section .thanks {
+
+.thanks {
   text-align: center;
   padding: 50px 25px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  background-color: hsl(0deg, 0%, 100%);
+  width: 100%;
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.footer .button {
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 10px;
+}
+.footer #go-back {
+  margin-left: 25px;
+  border: 2px solid hsl(228deg, 100%, 84%);
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(228deg, 100%, 84%);
+}
+.footer #go-back:hover {
+  color: hsl(213deg, 96%, 18%);
+  border: 2px solid hsl(213deg, 96%, 18%);
+}
+.footer .disabled {
+  pointer-events: none;
+}
+.footer .next-step {
+  margin-right: 25px;
+  border: 2px solid hsl(243deg, 100%, 62%);
+  background-color: hsl(243deg, 100%, 62%);
+  color: white;
+}
+.footer input.next-step {
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.footer .next-step:hover {
+  color: hsl(243deg, 100%, 62%);
+  background-color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  main {
+    background-color: hsl(0deg, 0%, 100%);
+    display: grid;
+    grid-template-columns: 30% auto;
+    margin: 10% auto;
+    width: 80%;
+    max-width: 900px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px hsl(229deg, 24%, 87%);
+  }
+  nav {
+    display: block;
+    margin: 20px;
+  }
+  nav #desktop {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1/2;
+  }
+  nav #nav {
+    display: block;
+    background-image: url("../images/bg-sidebar-desktop.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: hsl(243deg, 100%, 62%);
+    width: 100%;
+    aspect-ratio: 4/1;
+  }
+  nav #nav .description {
+    display: flex;
+  }
+  nav #nav .description button {
+    margin: 0;
+  }
+  nav #nav .page-description {
+    display: block;
+  }
+  form {
+    margin: auto;
+    padding: 25px 0;
+    width: 85%;
+  }
+  section {
+    margin: 0;
+    width: 100%;
+  }
+  .footer {
+    position: relative;
+    margin: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
