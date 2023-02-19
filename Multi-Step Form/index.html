@@ -10,6 +10,7 @@
   <body>
     <main>
       <nav>
+        <img id="desktop" src="images/bg-sidebar-desktop.svg" alt="" />
         <div id="nav">
           <div id="page-1" class="description">
             <button class="selected">1</button>
@@ -40,7 +41,6 @@
             </div>
           </div>
         </div>
-        <img id="desktop" src="images/bg-sidebar-mobile.svg" alt="" />
       </nav>
 
       <form id="form-post" action="thanks.html">
@@ -195,19 +195,22 @@
             <h1>Finishing Up</h1>
             <p>Duble-check if everything looks OK before confirming</p>
           </div>
-          <div class="form">
-            <div id="plan-info">
-              <h4>Pro</h4>
-              <p>R$15<span class="plan-change">/mo</span></p>
-              <h6 class="year-contract hide">2 months free</h6>
+          <div class="form" id="form-summary">
+            <div id="gray-bg">
+              <div id="plan-info" class="add-ons-summary">
+                <h4>Pro</h4>
+                <p>R$15<span class="plan-change">/mo</span></p>
+                <h6 class="year-contract hide">2 months free</h6>
+              </div>
+              <p id="change-plan">Change Plan</p>
+              <hr />
+              <div>
+                <div id="on-serv" class="add-ons-summary"></div>
+                <div id="lar-sto" class="add-ons-summary"></div>
+                <div id="cus-prof" class="add-ons-summary"></div>
+              </div>
             </div>
-            <p id="change-plan">Change Plan</p>
-            <div>
-              <div id="on-serv" class="add-ons-summary"></div>
-              <div id="lar-sto" class="add-ons-summary"></div>
-              <div id="cus-prof" class="add-ons-summary"></div>
-            </div>
-            <div id="total">
+            <div id="total" class="add-ons-summary">
               <h4>Total</h4>
               <p>
                 R$<span id="valor-total">15</span

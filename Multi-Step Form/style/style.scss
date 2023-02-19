@@ -20,6 +20,7 @@ $white: hsl(0, 0%, 100%);
   margin: 0;
   padding: 0;
   font-family: "Ubuntu", sans-serif;
+  cursor: default;
 }
 
 .hide {
@@ -42,6 +43,7 @@ body {
   background-color: $magnolia;
   width: 100%;
   aspect-ratio: 2/1;
+
   margin: auto;
   display: flex;
   justify-content: center;
@@ -74,6 +76,8 @@ section {
 
   width: 75%;
   margin: -20% auto 150px auto;
+  box-shadow: 0 0 5px $light-gray;
+  border-radius: 15px;
 
   .header {
     background-color: $white;
@@ -228,6 +232,57 @@ section {
       }
     }
   }
+
+  #form-summary {
+    #gray-bg {
+      background-color: $magnolia;
+      padding: 15px;
+      border-radius: 15px;
+    }
+    background-color: $white;
+    // padding: 15px 25px;
+    border-radius: 0 0 15px 15px;
+    div {
+      font-size: 1.1rem;
+      font-weight: 400;
+
+      h6 {
+        font-size-adjust: 0.8;
+        font-weight: 400;
+        color: $marine-blue;
+      }
+    }
+    hr {
+      color: $light-gray;
+      margin: 15px 0;
+    }
+    #change-plan {
+      font-size: 0.8rem;
+      padding: 5px;
+      color: $cool-gray;
+    }
+    #change-plan:hover {
+      color: $marine-blue;
+    }
+    .add-ons-summary {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px 0;
+      color: $cool-gray;
+    }
+    #plan-info {
+      color: $marine-blue;
+      font-weight: 700;
+    }
+    #total {
+      padding: 15px;
+      p {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: $purplish-blue;
+      }
+    }
+  }
 }
 
 .thanks {
@@ -288,39 +343,45 @@ section {
     margin: 10% auto;
     width: 80%;
     max-width: 900px;
+
     border-radius: 20px;
     box-shadow: 0 0 10px $light-gray;
   }
   nav {
     display: block;
     margin: 20px;
-    #desktop {
-      display: block;
-      width: 100%;
-      aspect-ratio: 1/2;
-    }
+
     #nav {
+      position: absolute;
       display: block;
 
-      background-image: url("../images/bg-sidebar-desktop.svg");
+      background-image: url("");
 
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-color: $purplish-blue;
-      width: 100%;
+      background-color: transparent;
+      width: 20%;
       aspect-ratio: 4/1;
-
-      // height: 100%;
+      margin: 4%;
+      margin-top: -45%;
 
       .description {
         display: flex;
+        padding: 15px 0;
         button {
           margin: 0;
         }
       }
       .page-description {
         display: block;
+        color: $white;
+
+        font-size: 0.9rem;
+        padding-left: 10px;
       }
+    }
+    #desktop {
+      display: block;
+      position: relative;
+      width: 130%;
     }
   }
 
@@ -332,9 +393,16 @@ section {
   section {
     margin: 0;
     width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    box-shadow: 0 0 0 $light-gray;
   }
+
   .footer {
     position: relative;
-    margin: 0;
+    margin: auto;
+    width: 90%;
   }
 }

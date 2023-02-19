@@ -7,6 +7,7 @@
   margin: 0;
   padding: 0;
   font-family: "Ubuntu", sans-serif;
+  cursor: default;
 }
 
 .hide {
@@ -63,6 +64,8 @@ section {
   z-index: 1;
   width: 75%;
   margin: -20% auto 150px auto;
+  box-shadow: 0 0 5px hsl(229deg, 24%, 87%);
+  border-radius: 15px;
 }
 section .header {
   background-color: hsl(0deg, 0%, 100%);
@@ -207,6 +210,54 @@ section .add-ons-content .label-pattern h6 {
   padding-left: 15px;
   color: hsl(243deg, 100%, 62%);
 }
+section #form-summary {
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 0 0 15px 15px;
+}
+section #form-summary #gray-bg {
+  background-color: hsl(217deg, 100%, 97%);
+  padding: 15px;
+  border-radius: 15px;
+}
+section #form-summary div {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+section #form-summary div h6 {
+  font-size-adjust: 0.8;
+  font-weight: 400;
+  color: hsl(213deg, 96%, 18%);
+}
+section #form-summary hr {
+  color: hsl(229deg, 24%, 87%);
+  margin: 15px 0;
+}
+section #form-summary #change-plan {
+  font-size: 0.8rem;
+  padding: 5px;
+  color: hsl(231deg, 11%, 63%);
+}
+section #form-summary #change-plan:hover {
+  color: hsl(213deg, 96%, 18%);
+}
+section #form-summary .add-ons-summary {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  color: hsl(231deg, 11%, 63%);
+}
+section #form-summary #plan-info {
+  color: hsl(213deg, 96%, 18%);
+  font-weight: 700;
+}
+section #form-summary #total {
+  padding: 15px;
+}
+section #form-summary #total p {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: hsl(243deg, 100%, 62%);
+}
 
 .thanks {
   text-align: center;
@@ -273,28 +324,33 @@ section .add-ons-content .label-pattern h6 {
     display: block;
     margin: 20px;
   }
-  nav #desktop {
-    display: block;
-    width: 100%;
-    aspect-ratio: 1/2;
-  }
   nav #nav {
+    position: absolute;
     display: block;
-    background-image: url("../images/bg-sidebar-desktop.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: hsl(243deg, 100%, 62%);
-    width: 100%;
+    background-image: url("");
+    background-color: transparent;
+    width: 20%;
     aspect-ratio: 4/1;
+    margin: 4%;
+    margin-top: -45%;
   }
   nav #nav .description {
     display: flex;
+    padding: 15px 0;
   }
   nav #nav .description button {
     margin: 0;
   }
   nav #nav .page-description {
     display: block;
+    color: hsl(0deg, 0%, 100%);
+    font-size: 0.9rem;
+    padding-left: 10px;
+  }
+  nav #desktop {
+    display: block;
+    position: relative;
+    width: 130%;
   }
   form {
     margin: auto;
@@ -304,10 +360,16 @@ section .add-ons-content .label-pattern h6 {
   section {
     margin: 0;
     width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    box-shadow: 0 0 0 hsl(229deg, 24%, 87%);
   }
   .footer {
     position: relative;
-    margin: 0;
+    margin: auto;
+    width: 90%;
   }
 }
 
