@@ -285,9 +285,13 @@ section {
   }
 }
 
-.thanks {
+#thanks {
+  width: 75%;
   text-align: center;
-  padding: 50px 25px;
+  .thanks {
+    border-radius: 15px;
+    padding: 50px 25px;
+  }
 }
 
 .footer {
@@ -399,7 +403,9 @@ section {
     align-content: space-between;
     box-shadow: 0 0 0 $light-gray;
   }
-
+  #thanks {
+    margin: auto;
+  }
   .footer {
     position: relative;
     margin: auto;

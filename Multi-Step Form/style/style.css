@@ -259,8 +259,12 @@ section #form-summary #total p {
   color: hsl(243deg, 100%, 62%);
 }
 
-.thanks {
+#thanks {
+  width: 75%;
   text-align: center;
+}
+#thanks .thanks {
+  border-radius: 15px;
   padding: 50px 25px;
 }
 
@@ -365,6 +369,9 @@ section #form-summary #total p {
     flex-direction: column;
     align-content: space-between;
     box-shadow: 0 0 0 hsl(229deg, 24%, 87%);
+  }
+  #thanks {
+    margin: auto;
   }
   .footer {
     position: relative;
