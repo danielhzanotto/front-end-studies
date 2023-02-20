@@ -332,7 +332,7 @@ section #form-summary #total p {
     width: 20%;
     aspect-ratio: 4/1;
     margin: 4%;
-    margin-top: -45%;
+    margin-top: -50%;
   }
   nav #nav .description {
     display: flex;
@@ -370,6 +370,11 @@ section #form-summary #total p {
     position: relative;
     margin: auto;
     width: 90%;
+  }
+}
+@media only screen and (min-width: 1120px) {
+  nav #nav {
+    margin-top: -560px;
   }
 }
 
